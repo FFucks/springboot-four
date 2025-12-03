@@ -1,5 +1,6 @@
 package com.ffucks.config;
 
+import org.jspecify.annotations.NonNull;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.HandlerTypePredicate;
@@ -11,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ApiConfig implements WebMvcConfigurer {
 
     @Override
-    public void configureApiVersioning(ApiVersionConfigurer configurer) {
+    public void configureApiVersioning(@NonNull ApiVersionConfigurer configurer) {
         configurer.usePathSegment(1);
     }
 
